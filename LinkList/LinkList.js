@@ -49,5 +49,13 @@ linklist.append(2);
 linklist.append(3);
 linklist.append(4);
 
-console.log(linklist.length);
-console.log(linklist.print());
+// console.log(linklist.length);
+// console.log(linklist.print());
+let removeElements = function (head, val) {
+  if (head == null) return null;
+
+  head.next = removeElements(head.next, val);
+
+  return head.val === val ? head.next : head; //递归
+};
+console.log(removeElements(linklist.hand, 3));
