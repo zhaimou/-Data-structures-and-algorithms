@@ -6,7 +6,8 @@ let removeElements = function (head, val) {
   return head.val === val ? head.next : head; //递归
 };
 
-// 哨兵 ele
+// 哨兵 ele=>1=>2=>3 return  ele.next代替头节点
+
 let removeElements1 = function (head, val) {
   let ele = {
     next: head,
@@ -14,6 +15,7 @@ let removeElements1 = function (head, val) {
   let p = ele;
   while (p.next) {
     if (p.next.val === val) {
+      //删除节点
       p.next = p.next.next;
     } else {
       p = p.next;
