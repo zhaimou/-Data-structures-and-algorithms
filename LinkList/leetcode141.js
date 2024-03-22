@@ -1,5 +1,3 @@
-const { fa } = require("element-plus/es/locale");
-
 // 如何判断是否有环形链表
 function hasCycle(head) {
   let cache = new Set();
