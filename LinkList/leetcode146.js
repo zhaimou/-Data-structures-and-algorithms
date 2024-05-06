@@ -31,5 +31,4 @@ LRUCache.prototype.put = function(key,value){
         this.cache.delete(this.cache.keys().next().value)
     }
       this.cache.set(value)
-    
 }
