@@ -18,5 +18,5 @@ let groupAnagrams = function(strs) {
     return [...hash.values()]
 
 };
-let arr = ["eat", "tea", "tan", "ate", "nat", "bat"]
-console.log(groupAnagrams(arr))
+let intervals = ["eat", "tea", "tan", "ate", "nat", "bat"]
+console.log(groupAnagrams(intervals))

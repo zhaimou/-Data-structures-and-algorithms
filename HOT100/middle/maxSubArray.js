@@ -14,14 +14,14 @@
 // 输入：nums = [5,4,-1,7,8]
 // 输出：23
 
-var maxSubArray = function(nums) {
-     
-};
-
-// Array.prototype.myBind = function(thisArg,){
-//     this = thisArg
-//     function proxyFn(thisArg){
-//         fn.thisArg 
-//     }
-//     return proxyFn
-// }
+function maxSubarraySum(nums) {
+        if(nums.length === 1) return  nums[0]
+        let maxSum = nums[0];  // 定义一个变量 maxSum 来存储当前最大子序和，初始值设为数组的第一个元素值。
+        let currentSum = nums[0];  // 定义一个变量 currentSum 来存储当前的子序和，初始值也为数组的第一个元素值。
+        for (let i = 1; i < nums.length; i++) {  // 从数组的第二个元素开始遍历
+          currentSum = Math.max(nums[i], currentSum + nums[i]);  // 计算当前元素值与当前元素值加上 currentSum 的较大值，更新 currentSum。
+          maxSum = Math.max(maxSum, currentSum);  // 比较 currentSum 与 maxSum，取较大值更新 maxSum。
+        }
+        
+       return maxSum;  // 遍历完整个数组后，maxSum 即为最大子序和。
+ }
